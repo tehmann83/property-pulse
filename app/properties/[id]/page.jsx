@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Property from '@/models/Property';
 import PropertyDetails from '@/components/PropertyDetails';
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
+import PropertyImages from '@/components/PropertyImages';
 import React from 'react';
 import connectDB from '@/config/database';
 
@@ -33,6 +34,7 @@ const PropertyPage = async ({ params }) => {
           </div>
         </div>
       </section>
+      <PropertyImages images={property.images} />
     </>
   );
 };
